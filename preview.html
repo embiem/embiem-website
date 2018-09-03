@@ -9,6 +9,11 @@
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Rubik" rel="stylesheet">
   <script src="main.js"></script>
   <style>
+    html {
+      min-height: 100%;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 0 30px inset;
+    }
+
     body {
       background-color: #f8f8f8;
       background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2367696e' fill-opacity='0.17'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -16,13 +21,13 @@
 
     header {
       background: #fafafa;
-      width: 100%;
+      width: 53%;
       height: 50px;
       position: relative;
-      left: -16px;
+      left: -20px;
       top: 32px;
       transform: rotate(-1.36deg);
-      box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
+      box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px;
       z-index: 10;
     }
 
@@ -43,8 +48,9 @@
 
     header a:nth-of-type(2) {
       position: relative;
-      left: 246px;
+      left: 178px;
       top: 6px;
+      transform: rotate(-15deg);
     }
 
     main {
@@ -60,6 +66,7 @@
       transform: rotate(4.4deg);
       width: 724px;
       height: 818px;
+      box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 8px;
     }
 
     main .alice-background h1 {
