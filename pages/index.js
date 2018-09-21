@@ -4,6 +4,6 @@ import uiComponents from "../components/ui";
 
 export default () => (
   <Layout>
-    <IndexContent components={uiComponents} />
+    <h1>Hey!</h1>
   </Layout>
 );

@@ -1,13 +1,14 @@
-import Prism from "prismjs"; // all we need to do is import it once
+import Prism from "prismjs";
 import { Component } from "react";
 import { Spring } from "react-spring";
 import Head from "next/head";
 
 export default class extends Component {
   componentDidMount() {
-    // make sure we highlight code components on the client
+    // Highlight code components on the client
     window.Prism.highlightAll();
   }
+
   render() {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
@@ -22,7 +23,7 @@ export default class extends Component {
                 position: relative;
                 top: 67px;
                 left: 85px;
-                margin-right: 170px;
+                margin-right: 170px!important;
                 transform: rotate(-4.4deg);
               }
             `}</style>
