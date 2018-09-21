@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
-import IndexContent from "./index.mdx";
+import BlogContent from "./blog.mdx";
 import uiComponents from "../components/ui";
 
 export default () => (
   <Layout>
-    <IndexContent components={uiComponents} />
+    <BlogContent components={uiComponents} />
   </Layout>
 );

@@ -1,13 +1,21 @@
+import Link from "next/link";
+
+const NavLink = ({ text, href }) => <Link href={href}>{text}</Link>;
+
 export default () => (
   <header>
-    <a>Home</a>
-    <a>Blog</a>
-    <style jsx>{`
+    <Link href="/">
+      <a>Home</a>
+    </Link>
+    <Link href="/blog">
+      <a>Blog</a>
+    </Link>
+    <style jsx global>{`
       header {
         background: #fafafa;
         width: 53%;
         height: 50px;
-        position: relative;
+        position: fixed;
         left: -20px;
         top: 32px;
         transform: rotate(-1.36deg);
@@ -21,6 +29,7 @@ export default () => (
         font-weight: bold;
         font-size: 24px;
         color: #354751;
+        text-decoration: none;
       }
 
       header a:nth-of-type(1) {

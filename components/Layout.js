@@ -1,13 +1,24 @@
 import { Fragment } from "react";
+import Head from "next/head";
+
+import Header from "../components/Header";
+import Main from "../components/Main";
 
 export default ({ children }) => (
   <Fragment>
-    {children}
+    <Head>
+      <link
+        href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Rubik"
+        rel="stylesheet"
+      />
+    </Head>
+
+    <Header />
+    <Main>{children}</Main>
 
     <style global jsx>{`
       html {
         min-height: 100%;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 30px inset;
       }
 
       body {
