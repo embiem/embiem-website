@@ -1,4 +1,10 @@
 // next.config.js
 const withMDX = require("@zeit/next-mdx")();
 
-module.exports = withMDX();
+module.exports = withMDX({
+  exportPathMap: function() {
+    return {
+      "/": { page: "/" }
+    };
+  }
+});
