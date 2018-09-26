@@ -2,21 +2,19 @@ import css from "styled-jsx/css";
 import axios from "axios";
 import Layout from "../components/Layout";
 import IconButton from "../components/IconButton";
+import IconLink from "../components/IconLink";
 import RepoList from "../components/RepoList";
-import IndexContent from "./index.mdx";
-import uiComponents from "../components/ui";
 import * as colors from "../utils/colors";
-import { fontFamily } from "../utils/styleConstants";
 
 const { className: buttonClassName, styles: buttonStyles } = css.resolve`
-button:nth-of-type(1) {
+a:nth-of-type(1) {
   position: relative;
   left: 18px;
   top: 70px;
   transform: rotate(-1.26deg);
 }
 
-button:nth-of-type(2) {
+a:nth-of-type(2) {
   position: relative;
   left: -66px;
   top: 120px;
@@ -39,6 +37,7 @@ export default class extends React.Component {
       if (response.data && response.data.items) {
         return {
           repos: response.data.items.slice(0, 3).map(repo => ({
+            id: repo.id,
             name: repo.name,
             url: repo.html_url,
             description: repo.description
@@ -60,12 +59,13 @@ export default class extends React.Component {
         <div className="profile">
           <h2>Some of my open source repos:</h2>
           <div>
-            <IconButton
+            <IconLink
+              href="https://github.com/embiem"
               className={buttonClassName}
               iconSrc="static/icons8-github.svg"
               text="GitHub"
             />
-            <IconButton
+            <IconLink
               className={buttonClassName}
               iconSrc="static/Gitlab_font_awesome.svg"
               text="GitLab"
@@ -80,6 +80,22 @@ export default class extends React.Component {
               left: 171
             }}
           />
+          <div>
+            <IconLink
+              className={buttonClassName}
+              iconSrc="static/iconmonstr-linkedin-3.svg"
+              text="Linkedin"
+            />
+            <IconLink
+              className={buttonClassName}
+              iconSrc="static/Twitter_Logo_Blue.svg"
+              text="Twitter"
+            />
+          </div>
+          <hr />
+          <h2>Let's connect!</h2>
+          <img src="static/martin-wedding.jpg" alt="Me at my wedding" />
+          <caption>That's me at my wedding.</caption>
           <style jsx>{`
             .profile {
               width: 577px;
@@ -106,6 +122,16 @@ export default class extends React.Component {
               position: relative;
               left: -139px;
               top: 67px;
+            }
+
+            img {
+              position: relative;
+              left: 450px;
+              top: -10px;
+              box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px;
+              border-radius: 47px;
+              width: 180px;
+              transform: rotate(3.5deg);
             }
           `}</style>
           {buttonStyles}
