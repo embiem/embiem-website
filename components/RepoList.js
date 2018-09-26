@@ -28,6 +28,10 @@ export default ({ repos, ...props }) => (
         margin: 0;
       }
 
+      a div {
+        display: inline-block;
+      }
+
       span {
         display: block;
         position: relative;

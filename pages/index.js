@@ -133,7 +133,7 @@ export default class extends React.Component {
             h2:nth-of-type(1) {
               position: relative;
               left: 165px;
-              top: 50px;
+              top: 43px;
               transform: rotate(2.1deg);
             }
             h2:nth-of-type(2) {
@@ -145,11 +145,11 @@ export default class extends React.Component {
             }
 
             hr:nth-of-type(1) {
-              width: 120px;
+              width: 140px;
               transform: rotate(82deg);
               position: relative;
               left: -139px;
-              top: 67px;
+              top: 72px;
             }
 
             hr:nth-of-type(2) {
@@ -181,8 +181,7 @@ export default class extends React.Component {
               left: -172px;
               top: 20px;
               font-weight: 500;
-              font-size: 14px;
-              transition: opacity 0.2s;
+              font-size: 14px14px;
             }
 
             .profile-image:hover span {
