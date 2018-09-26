@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
-import PaperPage from "../components/PaperPage";
-import BlogContent from "./blog.mdx";
 import uiComponents from "../components/ui";
+import PaperPage from "../components/blog/PaperPage";
+import BlogContent from "./blog.mdx";
 
 export default () => (
   <Layout>

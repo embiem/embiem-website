@@ -1,9 +1,8 @@
 import css from "styled-jsx/css";
 import axios from "axios";
 import Layout from "../components/Layout";
-import IconButton from "../components/IconButton";
-import IconLink from "../components/IconLink";
-import RepoList from "../components/RepoList";
+import IconLink from "../components/interaction/IconLink";
+import RepoList from "../components/home/RepoList";
 import * as colors from "../utils/colors";
 
 const { className: buttonClassName, styles: buttonStyles } = css.resolve`

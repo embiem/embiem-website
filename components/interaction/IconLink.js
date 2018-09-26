@@ -1,4 +1,4 @@
-import * as colors from "../utils/colors";
+import * as colors from "../../utils/colors";
 
 export default ({ iconSrc, text, ...props }) => (
   <a {...props}>
