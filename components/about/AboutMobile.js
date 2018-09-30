@@ -1,9 +1,10 @@
 import * as colors from "../../utils/colors";
 import IconLink from "../interaction/IconLink";
+import NameExplain from "../header/NameExplain";
 import RepoList from "./RepoList";
 
 const linkStyle = {
-  margin: "6px 12px"
+  margin: "6px 8px"
 };
 
 export default ({ repos }) => (
@@ -45,16 +46,19 @@ export default ({ repos }) => (
         text="Keybase"
       />
     </div>
+
     <hr />
+
+    <p>Why "embiem"?</p>
+    <NameExplain />
     <div className="profile-image">
       <img src="static/martin-wedding.jpg" alt="Me at my wedding" />
-      <span>That's me at my wedding.</span>
     </div>
 
     <style jsx>{`
       .profile {
         width: 90%;
-        height: 472px;
+        height: 622px;
         padding: 12px;
         transform: rotate(-1.52deg);
         background-color: ${colors.primary};
@@ -68,7 +72,7 @@ export default ({ repos }) => (
       }
 
       .profile-image {
-        display: inline-block;
+        margin-top: 18px;
       }
 
       img {

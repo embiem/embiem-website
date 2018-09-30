@@ -38,7 +38,7 @@ const HeaderBig = () => (
         minWidth: 200
       }}
     />
-    <NameExplain />
+    <NameExplain style={{ float: "right" }} />
     <style jsx>{`
       header {
         width: 98%;
