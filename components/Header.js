@@ -59,6 +59,8 @@ const HeaderBig = () => (
 
 export default () => (
   <MediaQueryConsumer>
-    {({ isMobile }) => (isMobile ? <HeaderMobile /> : <HeaderBig />)}
+    {({ isMobile, isTablet }) =>
+      isMobile || isTablet ? <HeaderMobile /> : <HeaderBig />
+    }
   </MediaQueryConsumer>
 );

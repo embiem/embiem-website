@@ -41,8 +41,8 @@ export default class extends React.Component {
     return (
       <Layout>
         <MediaQueryConsumer>
-          {({ isMobile }) =>
-            isMobile ? (
+          {({ isMobile, isTablet }) =>
+            isMobile || isTablet ? (
               <AboutMobile repos={this.props.repos} />
             ) : (
               <AboutDesktop repos={this.props.repos} />

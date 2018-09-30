@@ -2,17 +2,22 @@ import * as colors from "../../utils/colors";
 import IconLink from "../interaction/IconLink";
 import RepoList from "./RepoList";
 
+const linkStyle = {
+  margin: "6px 12px"
+};
+
 export default ({ repos }) => (
   <div className="profile">
     <p>Check out my repos & coding activity:</p>
     <div>
       <IconLink
+        style={linkStyle}
         href="https://github.com/embiem"
         iconSrc="static/icons8-github.svg"
         text="GitHub"
       />
-      <div className="spacer" />
       <IconLink
+        style={linkStyle}
         href="https://gitlab.com/embiem"
         iconSrc="static/Gitlab_font_awesome.svg"
         text="GitLab"
@@ -22,18 +27,19 @@ export default ({ repos }) => (
     <p>Let's connect:</p>
     <div>
       <IconLink
+        style={linkStyle}
         href="https://www.linkedin.com/in/mbeierling/"
         iconSrc="static/iconmonstr-linkedin-3.svg"
         text="Linkedin"
       />
-      <div className="spacer" />
       <IconLink
+        style={linkStyle}
         href="https://twitter.com/em_bi_em"
         iconSrc="static/Twitter_Logo_Blue.svg"
         text="Twitter"
       />
-      <div className="spacer" />
       <IconLink
+        style={linkStyle}
         href="https://keybase.io/mbeierling"
         iconSrc="static/keybase-icon.svg"
         text="Keybase"
@@ -54,11 +60,6 @@ export default ({ repos }) => (
         background-color: ${colors.primary};
         color: ${colors.background};
         box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px;
-      }
-
-      .spacer {
-        display: inline-block;
-        width: 12px;
       }
 
       hr {
