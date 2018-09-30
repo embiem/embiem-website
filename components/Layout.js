@@ -5,8 +5,9 @@ import { fontFamily } from "../utils/styleConstants";
 import Header from "./Header";
 import Main from "./Main";
 import NProgress from "./NProgress";
+import { withMediaQuery } from "../utils/withMediaQuery";
 
-export default ({ children }) => (
+export default withMediaQuery(({ children }) => (
   <Fragment>
     <Head>
       <meta charset="utf-8" />
@@ -32,7 +33,10 @@ export default ({ children }) => (
       <meta property="og:title" content="MBM" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://embiem.me" />
-      <meta property="og:image" content="https://embiem.me/static/martin-wedding.jpg" />
+      <meta
+        property="og:image"
+        content="https://embiem.me/static/martin-wedding.jpg"
+      />
       <meta
         name="description"
         content="Martin Beierling-Mutz's Personal Website & Blog"
@@ -58,4 +62,4 @@ export default ({ children }) => (
       }
     `}</style>
   </Fragment>
-);
+));

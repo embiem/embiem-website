@@ -2,6 +2,7 @@ import Prism from "prismjs";
 import { Component } from "react";
 import { Spring } from "react-spring";
 import Head from "next/head";
+import { MediaQueryConsumer } from "../../utils/withMediaQuery";
 
 export default class extends Component {
   componentDidMount() {
@@ -18,13 +19,25 @@ export default class extends Component {
             <Head>
               <link href="/static/prism.css" rel="stylesheet" />
             </Head>
-            <style jsx>{`
-              pre {
-                display: inline-block;
-                margin: 1em 64px !important;
-                transform: rotate(-4.4deg);
+            <MediaQueryConsumer>
+              {({ isMobile, isTablet }) =>
+                !isMobile && !isTablet ? (
+                  <style jsx>{`
+                    pre {
+                      display: inline-block;
+                      margin: 1em 64px !important;
+                      transform: rotate(-4.4deg);
+                    }
+                  `}</style>
+                ) : (
+                  <style jsx>{`
+                    pre {
+                      margin: 1em 10px !important;
+                    }
+                  `}</style>
+                )
               }
-            `}</style>
+            </MediaQueryConsumer>
           </pre>
         )}
       </Spring>

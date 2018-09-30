@@ -2,10 +2,11 @@ import Link from "next/link";
 import faker from "faker";
 import parse from "date-fns/parse";
 
-import Layout from "../../components/Layout";
-import PostPreview from "../../components/blog/PostPreview";
+import Layout from "../components/Layout";
+import PostPreview from "../components/blog/PostPreview";
+import { MediaQueryConsumer } from "../utils/withMediaQuery";
 
-import { meta as metaWebsiteAndBlogWithNextJs } from "./website-and-blog-with-next-js.mdx";
+import { meta as metaWebsiteAndBlogWithNextJs } from "./blog/website-and-blog-with-next-js.mdx";
 
 const posts = [metaWebsiteAndBlogWithNextJs];
 
@@ -19,10 +20,13 @@ export default class extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="spacer" />
+        <MediaQueryConsumer>
+          {({ isMobile }) => (isMobile ? null : <div className="spacer" />)}
+        </MediaQueryConsumer>
+
         <div className="blog-posts">
           {posts.map(post => (
-            <React.Fragment>
+            <React.Fragment key={post.link}>
               <Link href={post.link}>
                 <a>
                   <PostPreview {...post} />
