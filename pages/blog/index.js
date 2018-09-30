@@ -5,10 +5,9 @@ import parse from "date-fns/parse";
 import Layout from "../../components/Layout";
 import PostPreview from "../../components/blog/PostPreview";
 
-import { meta as metaTestTwo } from "./test-two.mdx";
-import { meta as metaTest } from "./test.mdx";
+import { meta as metaWebsiteAndBlogWithNextJs } from "./website-and-blog-with-next-js.mdx";
 
-const posts = [metaTestTwo, metaTest];
+const posts = [metaWebsiteAndBlogWithNextJs];
 
 posts.sort(function(a, b) {
   // Turn your strings into dates, and then subtract them

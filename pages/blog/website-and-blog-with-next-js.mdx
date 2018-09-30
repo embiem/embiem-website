@@ -1,0 +1,81 @@
+import IconLink from "../../components/interaction/IconLink";
+import PostSection from "../../components/blog/PostSection";
+
+import withMdx from "../../utils/withMdx";
+
+export const meta = {
+  title: "Website & Blog with Next.js",
+  description: "Using Next.js, I created my new website & blog. It's static files served from Netlify's fast servers.",
+  date: "2018-09-30T12:14:22.804Z",
+  url: 'https://embiem.me/blog/website-and-blog-with-next-js',
+  link: '/blog/website-and-blog-with-next-js'
+}
+
+export default withMdx({...meta})
+
+
+I had a website once, which I made by taking an existing theme and editing a bit here and there. It was using Wordpress in the back for easy editing.
+
+At some point I forwarded my URL to my GitHub profile, because I had more activity there than on my website/blog.
+
+Now for the last years, I've been working a lot with React, Node and the JS ecosystem as a whole. Shifting from a Game Development focus in Unity with C# & Unreal with C++ to Web Development with JS & TS. It's been a wild ride, but I'm in love with the variety of the challenges that I face every day.
+
+## Building my own Website
+
+After all of this new knowledge and interest in Web Development, it was finally time to have my own little online space again. This website is the first version of that space.
+
+My goals for this website: 
+* A unique, completely self-built style that I can have fun with
+* Static files that can be hosted using [Netlify](https://www.netlify.com/)
+* Ability to quickly write blog posts using Markdown
+
+I used [Next.js](https://github.com/zeit/next.js), which in turn utilizes [React](https://github.com/facebook/react/) for building a server-rendered or static Website/Webapp.
+
+## Why Next.js
+
+I like the framework for its very light footprint & because the Developer Experience is superb: very fast builds and an architecture which is just as opiniated as it needs to be. Additionally to its server-rendering capabilities, it also allows you to export a static site.
+
+There are of course alternatives, of which [Gatsby](https://www.gatsbyjs.org) would be the biggest. I thought about using it for my website, especially because they just released version 2, which I wanted to give a spin anyways. But ultimately I fell far too much in love with Next.js's simplicity and stuck with it.
+
+One of the more important integrations I use is [MDX](https://github.com/mdx-js/mdx), for which Next.js has a [plugin](https://github.com/zeit/next-plugins/tree/master/packages/next-mdx). With this, you can simply import any mdx file and use it as if it was a React component.
+
+Here is a snippet that shows a HOC to render my blog posts:
+
+```javascript
+
+export default meta => ({ children }) => {
+  return (
+    <MDXProvider components={uiComponents}>
+      <Layout>
+        <SocialMeta {...meta} />
+        <PaperPage>
+          <content>
+            <uiComponents.h1>{meta.title}</uiComponents.h1>
+            {children}
+          </content>
+        </PaperPage>
+      </Layout>
+    </MDXProvider>
+  );
+};
+```
+
+If you're interested, you can [find the source code of this website on GitLab](https://gitlab.com/embiem/embiem-website). Please feel free to hit me up with any questions or feedback:
+
+<PostSection>
+  <IconLink
+    href="https://www.linkedin.com/in/mbeierling/"
+    iconSrc="/static/iconmonstr-linkedin-3.svg"
+    text="Linkedin"
+  />
+  <IconLink
+    href="https://twitter.com/em_bi_em"
+    iconSrc="/static/Twitter_Logo_Blue.svg"
+    text="Twitter"
+  />
+  <IconLink
+    href="https://keybase.io/mbeierling"
+    iconSrc="/static/keybase-icon.svg"
+    text="Keybase"
+  />
+</PostSection>

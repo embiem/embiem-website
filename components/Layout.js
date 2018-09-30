@@ -12,6 +12,31 @@ export default ({ children }) => (
       <meta charset="utf-8" />
       <meta http-equiv="x-ua-compatible" content="ie=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/static/favicon/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/static/favicon/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/static/favicon/site.webmanifest" />
+
+      <title>MBM</title>
+      <meta property="og:title" content="MBM" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://embiem.me" />
+      <meta property="og:image" content="https://embiem.me/static/martin-wedding.jpg" />
+      <meta
+        name="description"
+        content="Martin Beierling-Mutz's Personal Website & Blog"
+      />
     </Head>
 
     <NProgress color={colors.primary} height={4} />
