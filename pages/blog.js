@@ -4,26 +4,7 @@ import parse from "date-fns/parse";
 
 import Layout from "../components/Layout";
 import PostPreview from "../components/blog/PostPreview";
-
-const posts = [
-  ...[
-    {
-      title: "Test",
-      description: "A test blog post",
-      date: parse("09-30-2018", "MM-dd-yyyy", new Date()).toString()
-    },
-    {
-      title: "Test Two",
-      description: "A second test blog post",
-      date: parse("09-22-2018", "MM-dd-yyyy", new Date()).toString()
-    }
-  ],
-  ...Array.apply(null, Array(10)).map(_ => ({
-    title: faker.company.catchPhrase(),
-    description: faker.lorem.sentences(),
-    date: faker.date.past().toString()
-  }))
-];
+import { posts } from "./blog/index.js";
 
 posts.sort(function(a, b) {
   // Turn your strings into dates, and then subtract them
@@ -40,10 +21,7 @@ export default class extends React.Component {
           {posts.map(post => (
             <React.Fragment>
               <Link
-                href={`/blog/${post.title
-                  .toLowerCase()
-                  .trim()
-                  .replace(/ /g, "-")}`}
+                href={post.link}
               >
                 <a>
                   <PostPreview {...post} />

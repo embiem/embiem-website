@@ -1,8 +1,15 @@
 import withMdx from "../../utils/withMdx";
 
-export default withMdx()
+export const meta = {
+  title: "Test Two",
+  description: "A second test blog post",
+  date: "2018-09-30T12:14:22.804Z",
+  url: 'https://embiem.me/blog/test-two',
+  link: '/blog/test-two'
+}
 
-# Wow, this editing experience will blow your mind
+export default withMdx({...meta})
+
 
 Awesome! I write my whole content in this mdx and can define the components to use for each element!
 
@@ -15,6 +22,8 @@ This is awesome.
   "goo": 123
 }
 ```
+
+## Wow, this editing experience will blow your mind
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada aliquam ex ut porta. Phasellus condimentum ante velit, ac sollicitudin nisl tristique nec. Sed lobortis lectus et magna mollis eleifend. Vestibulum lobortis et justo ultrices fermentum. Integer quis tellus a est luctus auctor. Phasellus sed posuere velit. In non placerat nisi.
 

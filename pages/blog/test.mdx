@@ -1,7 +1,15 @@
 import withMdx from "../../utils/withMdx";
 
-export default withMdx()
+export const meta = {
+  title: "A very long Test title to show how this works",
+  description: "A test blog post",
+  date: "2018-09-28T12:14:22.804Z",
+  url: 'https://embiem.me/blog/test',
+  link: '/blog/test'
+}
 
-# Hello World
+export default withMdx({...meta})
+
+## Hello World
 
 text content

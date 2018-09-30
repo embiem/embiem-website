@@ -1,18 +1,43 @@
-export default ({ children }) => (
+export const h1 = ({ children }) => (
   <h1>
     {children}
+    <div className="spacer"></div>
+    <hr />
     <style jsx>{`
       h1 {
-        position: relative;
-        top: 35px;
-        left: 24px;
+        text-align: center;
+        font-size: 1.8em;
+        padding: 24px;
         transform: rotate(-7.1deg);
+      }
 
-        font-family: "M PLUS Rounded 1c", sans-serif;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 36px;
+      .spacer {
+        height: 12px;
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        transform: rotate(1.6deg);
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, 0)
+        );
       }
     `}</style>
   </h1>
+);
+
+export const h2 = ({ children }) => (
+  <h2>
+    {children}
+    <style jsx>{`
+      h2 {
+        padding: 0 24px;
+        transform: rotate(-5.4deg);
+      }
+    `}</style>
+  </h2>
 );

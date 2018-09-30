@@ -20,10 +20,8 @@ export default class extends Component {
             </Head>
             <style jsx>{`
               pre {
-                position: relative;
-                top: 67px;
-                left: 85px;
-                margin-right: 170px!important;
+                display: inline-block;
+                margin: 1em 64px !important;
                 transform: rotate(-4.4deg);
               }
             `}</style>

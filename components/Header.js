@@ -5,7 +5,7 @@ export default () => (
   <header>
     <nav>
       <Link href="/">
-        <a>Home</a>
+        <a>About</a>
       </Link>
       <Link href="/blog">
         <a>Blog</a>

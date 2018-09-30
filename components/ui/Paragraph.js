@@ -3,10 +3,7 @@ export default ({ children }) => (
     {children}
     <style jsx>{`
       p {
-        position: relative;
-        top: 67px;
-        left: 85px;
-        padding-right: 170px;
+        padding: 0 64px;
         transform: rotate(-4.4deg);
 
         font-family: "Rubik", sans-serif;
