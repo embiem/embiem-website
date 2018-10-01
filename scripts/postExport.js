@@ -2,13 +2,15 @@ const fs = require("fs");
 const getPathsObject = require("./getPathsObject");
 const formatDate = require("./formatDate");
 
+// ROBOTS.txt
 const robotsTxt = `User-agent: *
-Sitemap: https://embiem.me/sitemap.xml
+Sitemap: https://embiem.me/sitemap_local.xml
 Disallow:`;
 
 fs.writeFileSync("out/robots.txt", robotsTxt);
 console.log("robots.txt saved!");
 
+// SITEMAP.XML
 const pathsObj = getPathsObject();
 const today = formatDate(new Date());
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -21,5 +23,11 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   )}
 </urlset>`;
 
-fs.writeFileSync("out/sitemap.xml", sitemapXml);
-console.log("sitemap.xml saved!");
+fs.writeFileSync("out/sitemap_local.xml", sitemapXml);
+console.log("sitemap_local.xml saved!");
+
+// GOOGLE's VERIFY HTML
+const googleVerify = `google-site-verification: google8f5d91a719b65f09.html`;
+fs.mkdirSync("out/sitemap.xml");
+fs.writeFileSync("out/sitemap.xml/google8f5d91a719b65f09.html", googleVerify);
+console.log("google8f5d91a719b65f09.html saved!");
