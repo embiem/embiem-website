@@ -10,7 +10,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "postexport": "yarn node moveMyRedirects.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.15.3",
