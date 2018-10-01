@@ -10,8 +10,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "postexport": "node moveMyRedirects.js"
+    "export": "next export"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.15.3",
@@ -19,7 +18,6 @@
     "axios": "^0.18.0",
     "contentful": "^7.0.4",
     "date-fns": "^2.0.0-alpha.20",
-    "faker": "^4.1.0",
     "next": "^7.0.0",
     "nprogress": "^0.2.0",
     "prismjs": "^1.15.0",

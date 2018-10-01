@@ -1,6 +1,4 @@
 import Link from "next/link";
-import faker from "faker";
-import parse from "date-fns/parse";
 
 import Layout from "../components/Layout";
 import PostPreview from "../components/blog/PostPreview";
