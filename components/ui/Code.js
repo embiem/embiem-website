@@ -24,9 +24,10 @@ export default class extends Component {
                 !isMobile && !isTablet ? (
                   <style jsx>{`
                     pre {
+                      max-width: 77%;
                       display: inline-block;
                       margin: 1em 64px !important;
-                      transform: rotate(-4.4deg);
+                      transform: rotate(-2.4deg);
                     }
                   `}</style>
                 ) : (

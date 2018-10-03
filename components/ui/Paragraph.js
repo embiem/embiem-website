@@ -9,7 +9,7 @@ export default ({ children }) => (
           p {
             padding: 0 ${isMobile ? "32px" : "64px"};
             transform: rotate(
-              ${!isMobile && !isTablet ? "-4.4deg" : "0deg"}
+              ${!isMobile && !isTablet ? "-2.4deg" : "0deg"}
             );
             font-size: ${isMobile ? "16px" : "18px"};
             line-height: 34px;

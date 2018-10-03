@@ -12,7 +12,7 @@ export const h1 = ({ children }) => (
             text-align: center;
             font-size: ${isMobile ? "1.4em" : "1.8em"};
             padding:  ${isMobile ? "22px" : "24px"};
-            transform: rotate(${isMobile ? "-4.1deg" : "-7.1deg"});
+            transform: rotate(${isMobile ? "-4.1deg" : "-5.1deg"});
           }
 
           .spacer {
@@ -45,7 +45,7 @@ export const h2 = ({ children }) => (
           h2 {
             padding: 0 24px;
             transform: rotate(
-              ${!isMobile && !isTablet ? "-5.4deg" : "-1.4deg"}
+              ${!isMobile && !isTablet ? "-3.4deg" : "-1.4deg"}
             );
           }
         `}</style>
