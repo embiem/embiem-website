@@ -18,7 +18,11 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   ${Object.keys(pathsObj).map(
     path => `<url>
     <loc>https://embiem.me${path}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${
+      pathsObj[path].lastModified
+        ? formatDate(new Date(pathsObj[path].lastModified))
+        : today
+    }</lastmod>
   </url>`
   )}
 </urlset>`;
