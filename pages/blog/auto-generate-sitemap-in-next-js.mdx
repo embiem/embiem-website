@@ -1,0 +1,190 @@
+import IconLink from "../../components/interaction/IconLink";
+import PostSection from "../../components/blog/PostSection";
+
+import withMdx from "../../utils/withMdx";
+
+export const meta = {
+  title: "Auto-Generate sitemap.xml in Next.js",
+  description: "Creating a statically exported blog using Next.js and you need a sitemap.xml or robots.txt? Let me tell you how I did it for this website...",
+  date: "2018-10-03T00:10:27.608Z",
+  url: 'https://embiem.me/blog/auto-generate-sitemap-in-next-js',
+  link: '/blog/auto-generate-sitemap-in-next-js'
+}
+
+export default withMdx({...meta})
+
+
+Hurray! You're done with creating all the React Components and styling for your beautiful and performant Next.js website. What now?
+
+There are some key files you want to serve in the root of your exported package, but Next.js only supports copying files from the /static folder out of the box. But how to add e.g. a sitemap.xml, even in an automated and always up-to-date way?
+
+Let me show you how you could set this up for a 'yarn export'ed Next.js project.
+
+## Basic sitemap.xml structure
+
+First, we'll need to take a look at the info a basic sitemap needs to have.
+
+A list of...
+* URLs to each available page,
+* and an accompanying date,
+to let the search engine bot know where to find a page and when it was last changed.
+
+That's it! If you want more info, you can check out [Google's "Build and submit a sitemap" site](https://support.google.com/webmasters/answer/183668?visit_id=636740126864405871-4102161738&rd=1).
+
+## Gathering needed info
+
+Before we can write the file into our exported /out folder, we'll have to actually get the info we need: page url's & last modified dates.
+
+To do this, I've built this function, which returns all files' paths inside the /pages folder:
+
+```javascript
+module.exports = () => {
+  const walkSync = function(dir, filelist) {
+    const files = fs.readdirSync(dir);
+    filelist = filelist || [];
+    files.forEach(function(file) {
+      if (fs.statSync(dir + file).isDirectory()) {
+        filelist = walkSync(dir + file + "/", filelist);
+      } else {
+        filelist.push(dir + file);
+      }
+    });
+    return filelist;
+  };
+
+  let files = [];
+  walkSync("pages/", files);
+
+  const fileObj = {};
+  files.forEach(file => {
+    const fileStat = fs.statSync(file) || {};
+    const fileExtIdx = file.lastIndexOf(".");
+    const cleanFileName = file.substr(0, fileExtIdx).replace("pages/", "");
+    fileObj[`/${cleanFileName}`] = {
+      page: `/${cleanFileName}`,
+      lastModified: fileStat.mtime
+    };
+  });
+
+  return fileObj;
+};
+```
+
+This will return an object, which looks like this for my website at the moment of writing:
+
+```json
+{
+  "/blog/auto-generate-sitemap-in-next-js": {
+    "page": "/blog/auto-generate-sitemap-in-next-js",
+    "lastModified": "2018-10-03T00:25:30.806Z"
+  },
+  "/blog/website-and-blog-with-next-js": {
+    "page": "/blog/website-and-blog-with-next-js",
+    "lastModified": "2018-10-01T17:04:52.150Z"
+  },
+  "/blog": {
+    "page": "/blog",
+    "lastModified": "2018-10-03T00:26:02.134Z"
+  },
+  "/index": {
+    "page": "/index",
+    "lastModified": "2018-10-01T17:04:52.153Z"
+  }
+}
+```
+
+As you can see, we have all the info we need to build our sitemap!
+
+## Creating the file when exporting
+
+In Next.js, when you create your static files package, you'll typically run "yarn build && yarn export". We want to hook-in after the export, to create the sitemap.xml file in the /out folder.
+
+To hook into any scripts defined the package.json, we can add another script with the same name, but prefixed with "post";
+
+The new package.json scripts section will look like this:
+
+```json
+...
+"scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "postexport": "node scripts/postExport.js"
+  },
+...
+```
+
+I chose to create a new folder "scripts" and create the "postExport.js" file in there. This script will now run after every "yarn export" call.
+
+## Generate the sitemap.xml contents
+
+This "scripts/postExport.js" file will utilize the function we created previously to get all needed info:
+
+```javascript
+const pathsObj = getPathsObject();
+```
+
+Then, we'll create the sitemap.xml content & file:
+
+```javascript
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+  ${Object.keys(pathsObj).map(
+    path => `<url>
+    <loc>https://embiem.me${path}</loc>
+    <lastmod>${
+      formatDate(new Date(pathsObj[path].lastModified))
+    }</lastmod>
+  </url>`
+  )}
+</urlset>`;
+
+fs.writeFileSync("out/sitemap.xml", sitemapXml);
+```
+
+That's it! Well almost. I did use a formatDate function, to get the desired string format for our date.
+
+You could just do a ".substr()", as "pathsObj[path].lastModified" already contains an ISO formatted date. Or use some library like [date-fns](https://date-fns.org/), but I copied a working solution from the web:
+
+```javascript
+module.exports = function formatDate(date) {
+  var d = new Date(date),
+    month = "" + (d.getMonth() + 1),
+    day = "" + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) month = "0" + month;
+  if (day.length < 2) day = "0" + day;
+
+  return [year, month, day].join("-");
+};
+```
+
+Now, when you run "yarn export", a out/sitemap.xml file magically appears!
+
+## Challenge! Create robots.txt
+
+Based on this, it should be easy for you to create a robots.txt with your desired contents now.
+
+If you want to know how I did it, check out the [scripts folder in this website's](https://gitlab.com/embiem/embiem-website/tree/master/scripts) repo.
+
+Let me know whether you approached this differently, or let's simply connect:
+
+<PostSection>
+  <IconLink
+    href="https://www.linkedin.com/in/mbeierling/"
+    iconSrc="/static/iconmonstr-linkedin-3.svg"
+    text="Linkedin"
+  />
+  <IconLink
+    href="https://twitter.com/em_bi_em"
+    iconSrc="/static/Twitter_Logo_Blue.svg"
+    text="Twitter"
+  />
+  <IconLink
+    href="https://keybase.io/mbeierling"
+    iconSrc="/static/keybase-icon.svg"
+    text="Keybase"
+  />
+</PostSection>
