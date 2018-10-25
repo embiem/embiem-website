@@ -7,7 +7,6 @@ class Comments extends React.Component {
     const {
       publicRuntimeConfig: { githubClientId, githubClientSecret }
     } = getConfig();
-    console.log(getConfig());
 
     const gitalk = new Gitalk({
       clientID: githubClientId,
