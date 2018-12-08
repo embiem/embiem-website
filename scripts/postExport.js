@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs-extra");
 const getPathsObject = require("./getPathsObject");
 const formatDate = require("./formatDate");
 
@@ -35,3 +35,6 @@ const googleVerify = `google-site-verification: google8f5d91a719b65f09.html`;
 fs.mkdirSync("out/sitemap.xml");
 fs.writeFileSync("out/sitemap.xml/google8f5d91a719b65f09.html", googleVerify);
 console.log("google8f5d91a719b65f09.html saved!");
+
+// copy `_redirects` etc.
+fs.copySync("scripts/copy-to-build/", "out/");
