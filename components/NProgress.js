@@ -1,8 +1,9 @@
+import React from "react";
+import PropTypes from "prop-types";
 import NProgress from "nprogress";
 import Router from "next/router";
 
-Router.events.on("routeChangeStart", url => {
-  console.log(`Loading: ${url}`);
+Router.events.on("routeChangeStart", () => {
   NProgress.start();
 });
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -11,7 +12,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 const defaultColor = "#29d";
 const defaultHeight = 2;
 
-export default ({ color, height }) => (
+const NProgressWrapper = ({ color, height }) => (
   <style jsx global>{`
     #nprogress {
       pointer-events: none;
@@ -96,3 +97,10 @@ export default ({ color, height }) => (
     }
   `}</style>
 );
+
+NProgressWrapper.propTypes = {
+  color: PropTypes.string,
+  height: PropTypes.number
+};
+
+export default NProgressWrapper;

@@ -26,6 +26,7 @@
     "next": "^7.0.2",
     "nprogress": "^0.2.0",
     "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-spring": "^5.8.0"

@@ -1,13 +1,18 @@
-import Prism from "prismjs";
-import { Component } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Spring } from "react-spring";
 import Head from "next/head";
 import { MediaQueryConsumer } from "../../utils/withMediaQuery";
+import Prism from "prismjs";
 
-export default class extends Component {
+export default class CodeBlock extends Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
+
   componentDidMount() {
     // Highlight code components on the client
-    window.Prism.highlightAll();
+    Prism.highlightAll();
   }
 
   render() {
