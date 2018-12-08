@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import Head from "next/head";
 import * as colors from "../utils/colors";
 import { fontFamily } from "../utils/styleConstants";
@@ -11,7 +11,17 @@ export default withMediaQuery(({ children }) => (
   <Fragment>
     <Head>
       <meta charset="utf-8" />
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <link rel="canonical" href="https://embiem.me" />
+      <meta
+        name="viewport"
+        content="width=device-width,minimum-scale=1,initial-scale=1"
+      />
+      <style amp-boilerplate="">{`body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}`}</style>
+      <noscript>
+        <style amp-boilerplate="">{`body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}`}</style>
+      </noscript>
+      <style amp-custom="">{`body {font-family: Roboto, sans-serif; padding: 30px; color: #444;} h1 {margin-bottom: 5px;} .byline { color: #aaa; margin-bottom: 25px; } p {font-size: 18px; line-height: 30px; margin-top: 30px;} .caption {color: #ccc; margin-top: 0; font-size: 14px; text-align: center;}`}</style>
+      <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="theme-color" content={colors.primary} />
       <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
       <link
@@ -40,6 +50,7 @@ export default withMediaQuery(({ children }) => (
         name="description"
         content="Martin Beierling-Mutz's Personal Website & Blog"
       />
+      <script async src="https://cdn.ampproject.org/v0.js" />
     </Head>
 
     <NProgress color={colors.primary} height={4} />
