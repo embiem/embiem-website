@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios";
 import Layout from "../components/Layout";
 import AboutDesktop from "../components/about/AboutDesktop";
@@ -5,7 +6,7 @@ import AboutMobile from "../components/about/AboutMobile";
 
 import { MediaQueryConsumer } from "../utils/withMediaQuery";
 
-export default class extends React.Component {
+export default class IndexPage extends React.Component {
   static async getInitialProps() {
     try {
       const response = await axios.get(
