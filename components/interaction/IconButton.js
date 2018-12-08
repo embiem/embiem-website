@@ -3,7 +3,7 @@ import * as colors from "../../utils/colors";
 export default ({ iconSrc, text, ...props }) => (
   <button {...props}>
     <div>
-      <img src={iconSrc} alt={text} />
+      <img src={iconSrc} alt={text || "Social Media Icon"} />
       <span>{text}</span>
     </div>
     <style jsx>{`
