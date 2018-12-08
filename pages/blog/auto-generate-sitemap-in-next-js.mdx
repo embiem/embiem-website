@@ -37,7 +37,7 @@ Before we can write the file into our exported /out folder, we'll have to actual
 
 To do this, I've built this function, which returns all files' paths inside the /pages folder:
 
-```javascript
+```js
 module.exports = () => {
   const fileObj = {};
 
@@ -76,7 +76,7 @@ module.exports = () => {
 
 This will return an object, which looks like this for my website at the moment of writing:
 
-```json
+```js
 {
   "/blog/auto-generate-sitemap-in-next-js": {
     "page": "/blog/auto-generate-sitemap-in-next-js",

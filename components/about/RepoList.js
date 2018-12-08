@@ -36,7 +36,7 @@ export default ({ repos, ...props }) => (
         display: block;
         position: relative;
         left: 55px;
-        top: -6px;
+        top: -3px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -62,7 +62,7 @@ export default ({ repos, ...props }) => (
       }
 
       .repo:nth-child(even) span {
-        top: -4px;
+        top: 1px;
         font-weight: lighter;
         font-size: 12px;
         transform: rotate(1.8deg);
