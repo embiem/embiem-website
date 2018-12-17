@@ -39,7 +39,10 @@ export default withMediaQuery(({ children, isMobile }) => (
       <link rel="manifest" href="/static/favicon/site.webmanifest" />
 
       <title>MBM</title>
-      <meta property="og:title" content="MBM" />
+      <meta
+        property="og:title"
+        content="Martin Beierling-Mutz | MBM | embiem"
+      />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://embiem.me" />
       <meta
@@ -49,6 +52,10 @@ export default withMediaQuery(({ children, isMobile }) => (
       <meta
         name="description"
         content="Martin Beierling-Mutz's Personal Website & Blog"
+      />
+      <meta
+        name="keywords"
+        content="martin beierling-mutz, martin beierling, MBM, embiem, personal website, blog, javascript, web development"
       />
       <script async src="https://cdn.ampproject.org/v0.js" />
     </Head>
