@@ -5,9 +5,9 @@ import Layout from "../components/Layout";
 import PaperPage from "../components/blog/PaperPage";
 import SocialMeta from "../components/SocialMeta";
 
-const Comments = dynamic(() => import("../components/blog/Comments"), {
+/* const Comments = dynamic(() => import("../components/blog/Comments"), {
   ssr: false
-});
+}); */
 
 export default meta => ({ children }) => (
   <MDXProvider components={uiComponents}>
@@ -19,7 +19,6 @@ export default meta => ({ children }) => (
           {children}
         </content>
       </PaperPage>
-      <Comments />
     </Layout>
   </MDXProvider>
 );
