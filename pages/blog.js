@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { Trail } from "react-spring";
 import Layout from "../components/Layout";
 import PostPreview from "../components/blog/PostPreview";
 import { MediaQueryConsumer } from "../utils/withMediaQuery";
@@ -20,20 +20,32 @@ export default class extends React.Component {
     return (
       <Layout>
         <MediaQueryConsumer>
-          {({ isMobile }) => (isMobile ? null : <div className="spacer" />)}
+          {({ isMobile, isTablet }) =>
+            isMobile || isTablet ? null : <div className="spacer" />
+          }
         </MediaQueryConsumer>
 
         <div className="blog-posts">
-          {posts.map(post => (
-            <React.Fragment key={post.link}>
-              <Link href={post.link}>
-                <a>
-                  <PostPreview {...post} />
-                </a>
-              </Link>
-              <div className="spacer" />
-            </React.Fragment>
-          ))}
+          <Trail
+            items={posts}
+            keys={post => post.link}
+            from={{
+              transform: `translate3d(0,-30px,0) rotateZ(${Math.random() * 5 -
+                2.5}deg)`
+            }}
+            to={{ transform: "translate3d(0,0px,0) rotateZ(0deg)" }}
+          >
+            {post => props => (
+              <div style={props}>
+                <Link href={post.link}>
+                  <a>
+                    <PostPreview {...post} />
+                  </a>
+                </Link>
+                <div className="spacer" />
+              </div>
+            )}
+          </Trail>
         </div>
         <style jsx>{`
           .spacer {

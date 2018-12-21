@@ -5462,10 +5462,10 @@ react-flip-move@2.9.14:
   resolved "https://registry.yarnpkg.com/react-flip-move/-/react-flip-move-2.9.14.tgz#3b60e44493a4bbe115a8c3d678b844776bbab453"
   integrity sha1-O2DkRJOku+EVqMPWeLhEd2u6tFM=
 
-react-spring@^5.8.0:
-  version "5.9.2"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.9.2.tgz#4c4e048ffce24755eaa60acd2f3fe4a3d686ef16"
-  integrity sha512-ZDCBm4OaYuuSER3k7EELn9AKGs98HI23qMRL93zUUw6AlyBmqoU+eAfouGRx47gVkZkH+hArJXBHf4UGYpH9Og==
+react-spring@^7.2.2:
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-7.2.2.tgz#dbfb54591574754ed551935ddfc8189da4a73022"
+  integrity sha512-0VlSF148jLfOVHuHr1+G5RZY2YB7lwbyeeBtcGMkh4jb7V1/3JMmwwA1vdd2eTgQQsntl/Et6UMgZ80cFbVk6w==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
