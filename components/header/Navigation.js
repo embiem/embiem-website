@@ -1,3 +1,10 @@
+/* 
+.  .               ,        
+|\ | _..  ,* _  _.-+-* _ ._ 
+| \|(_] \/ |(_](_] | |(_)[ )
+            ._|             
+ */
+
 import Link from "next/link";
 import * as colors from "../../utils/colors";
 
