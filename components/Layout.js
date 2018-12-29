@@ -81,6 +81,7 @@ export default withMediaQuery(({ children, isMobile }) => (
       body {
         padding: 4px;
         font-family: ${fontFamily};
+        font-display: fallback;
         color: ${colors.primary};
         background-color: ${colors.white};
         ${isMobile ? "padding: 3px;" : ""}
