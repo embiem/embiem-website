@@ -12,10 +12,7 @@ export default withMediaQuery(({ children, isMobile }) => (
     <Head>
       <meta charset="utf-8" />
       <link rel="canonical" href="https://embiem.me" />
-      <meta
-        name="viewport"
-        content="width=device-width,minimum-scale=1,initial-scale=1"
-      />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <style amp-boilerplate="">{`body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}`}</style>
       <noscript>
         <style amp-boilerplate="">{`body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}`}</style>
@@ -38,22 +35,32 @@ export default withMediaQuery(({ children, isMobile }) => (
       />
       <link rel="manifest" href="/static/favicon/site.webmanifest" />
 
-      <title>MBM</title>
+      <title key="title">Martin Beierling-Mutz | MBM | embiem</title>
       <meta
+        key="description"
+        name="description"
+        content="Martin Beierling-Mutz's Personal Website & Blog"
+      />
+      <meta key="author" name="author" content="Martin Beierling-Mutz" />
+      <meta key="twitter:site" name="twitter:site" content="@em_bi_em" />
+      <meta
+        key="og:title"
         property="og:title"
         content="Martin Beierling-Mutz | MBM | embiem"
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://embiem.me" />
+      <meta key="og:url" property="og:url" content="https://embiem.me" />
       <meta
         property="og:image"
         content="https://embiem.me/static/martin-wedding.jpg"
       />
       <meta
-        name="description"
+        key="og:description"
+        name="og:description"
         content="Martin Beierling-Mutz's Personal Website & Blog"
       />
       <meta
+        key="keywords"
         name="keywords"
         content="martin beierling-mutz, martin beierling, MBM, embiem, personal website, blog, javascript, web development"
       />
