@@ -122,7 +122,7 @@ export default ({ repos }) => (
       <style jsx>{`
         .profile {
           width: 577px;
-          height: 500px;
+          height: 524px;
           transform: rotate(-1.52deg);
           background-color: ${colors.primary};
           color: ${colors.background};
