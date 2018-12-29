@@ -79,6 +79,7 @@ export default withMediaQuery(({ children, isMobile }) => (
       }
 
       body {
+        padding: 4px;
         font-family: ${fontFamily};
         color: ${colors.primary};
         background-color: ${colors.white};
