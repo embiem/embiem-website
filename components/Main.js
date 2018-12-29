@@ -5,11 +5,17 @@ export default ({ children }) => (
     {children}
     <style jsx>{`
       main {
-        margin-top: 64px;
+        margin-top: 96px;
         color: ${colors.primary};
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      @media (max-width: 960px) {
+        main {
+          margin-top: 64px;
+        }
       }
     `}</style>
   </main>
