@@ -1,6 +1,3 @@
-import IconLink from "../../components/interaction/IconLink";
-import PostSection from "../../components/blog/PostSection";
-
 import withMdx from "../../utils/withMdx";
 
 export const meta = {
@@ -33,15 +30,15 @@ I used [Next.js](https://github.com/zeit/next.js), which in turn utilizes [React
 
 ## Why Next.js
 
-I like the framework for its very light footprint & because the Developer Experience is superb: very fast builds and an architecture which is just as opiniated as it needs to be. Additionally to its server-rendering capabilities, it also allows you to export a static site.
+I like the framework for its very light footprint & because the Developer Experience is superb: very fast builds and an opiniated architecture. Additionally to its server-rendering capabilities, it also allows you to export a static site.
 
-There are of course alternatives, of which [Gatsby](https://www.gatsbyjs.org) would be the biggest. I thought about using it for my website, especially because they just released version 2, which I wanted to give a spin anyways. But ultimately I fell far too much in love with Next.js's simplicity and stuck with it.
+There are alternatives, of which [Gatsby](https://www.gatsbyjs.org) would be the most popular one. I thought about using it for my website, especially because they just released version 2. Ultimately, I fell far too much in love with Next.js's simplicity and stuck with it.
 
-One of the more important integrations I use is [MDX](https://github.com/mdx-js/mdx), for which Next.js has a [plugin](https://github.com/zeit/next-plugins/tree/master/packages/next-mdx). With this, you can simply import any mdx file and use it as if it was a React component.
+One of the most important integrations I use is [MDX](https://github.com/mdx-js/mdx), for which Next.js has a [plugin](https://github.com/zeit/next-plugins/tree/master/packages/next-mdx). With this, you can simply import any mdx file and use it as if it was a React component.
 
 Here is a snippet that shows a HOC to render my blog posts:
 
-```javascript
+```js
 
 export default meta => ({ children }) => {
   return (
@@ -61,26 +58,3 @@ export default meta => ({ children }) => {
 ```
 
 If you're interested, you can [find the source code of this website on GitLab](https://gitlab.com/embiem/embiem-website). Please feel free to hit me up with any questions or feedback:
-
-<PostSection>
-  <IconLink
-    href="https://www.linkedin.com/in/mbeierling/"
-    iconSrc="/static/iconmonstr-linkedin-3.svg"
-    text="Linkedin"
-  />
-  <IconLink
-    href="https://twitter.com/em_bi_em"
-    iconSrc="/static/Twitter_Logo_Blue.svg"
-    text="Twitter"
-  />
-  <IconLink
-    href="https://dev.to/embiem"
-    iconSrc="/static/dev-badge.svg"
-    text="DEV.to"
-  />
-  <IconLink
-    href="https://keybase.io/mbeierling"
-    iconSrc="/static/keybase-icon.svg"
-    text="Keybase"
-  />
-</PostSection>
