@@ -4,7 +4,7 @@
   "description": "My personal website",
   "main": "index.js",
   "repository": "git@gitlab.com:mBeierl/embiem-website.git",
-  "author": "Martin Beierling <mbeierling@gmail.com>",
+  "author": "Martin Beierling-Mutz <mbeierling@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "next",

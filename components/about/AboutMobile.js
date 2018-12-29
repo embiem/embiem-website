@@ -41,6 +41,12 @@ const items = [
     />
     <IconLink
       style={linkStyle}
+      href="https://dev.to/embiem"
+      iconSrc="/static/dev-badge.svg"
+      text="DEV.to"
+    />
+    <IconLink
+      style={linkStyle}
       href="https://keybase.io/mbeierling"
       iconSrc="static/keybase-icon.svg"
       text="Keybase"
@@ -57,7 +63,7 @@ const items = [
       <img src="static/martin-wedding.jpg" alt="Me at my wedding" />
     </div>
     <style jsx>{`
-    .profile-image img {
+      .profile-image img {
         box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px;
         border-radius: 47px;
         width: 180px;

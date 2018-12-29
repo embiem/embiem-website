@@ -6,6 +6,8 @@ import IconLink from "../interaction/IconLink";
 import RepoList from "./RepoList";
 import { summary, repoHeader, socialHeader } from "./content.json";
 
+// This is my personal website where I will do whatever I want 😛
+// ... Even though styling/positioning like this is frowned upon
 const { className: buttonClassName, styles: buttonStyles } = css.resolve`
 a:nth-of-type(1) {
   position: relative;
@@ -27,6 +29,13 @@ a:nth-of-type(3) {
   top: 170px;
   transform: rotate(1.6deg);
 }
+
+a:nth-of-type(4) {
+  position: relative;
+  left: -244px;
+  top: 221px;
+  transform: rotate(1deg);
+}
 `;
 
 export default ({ repos }) => (
@@ -36,13 +45,14 @@ export default ({ repos }) => (
       <style jsx>
         {`
           .summary {
+            text-align: justify;
             width: 543px;
             padding: 18px;
             margin-top: 18px;
             margin-right: 15px;
-            font-size: 16px;
+            font-size: 14px;
             letter-spacing: 0.4px;
-            line-height: 28px;
+            line-height: 1.5em;
             transform: rotate(-1.52deg);
             background-color: ${colors.background};
             color: ${colors.primary};
@@ -90,6 +100,12 @@ export default ({ repos }) => (
           text="Twitter"
         />
         <IconLink
+          href="https://dev.to/embiem"
+          className={buttonClassName}
+          iconSrc="/static/dev-badge.svg"
+          text="DEV.to"
+        />
+        <IconLink
           href="https://keybase.io/mbeierling"
           className={buttonClassName}
           iconSrc="static/keybase-icon.svg"
@@ -106,7 +122,7 @@ export default ({ repos }) => (
       <style jsx>{`
         .profile {
           width: 577px;
-          height: 472px;
+          height: 500px;
           transform: rotate(-1.52deg);
           background-color: ${colors.primary};
           color: ${colors.background};
@@ -141,11 +157,11 @@ export default ({ repos }) => (
         }
 
         hr:nth-of-type(2) {
-          width: 155px;
+          width: 204px;
           transform: rotate(82deg);
           position: relative;
           left: -110px;
-          top: 86px;
+          top: 118px;
         }
 
         .profile-image {
