@@ -22,22 +22,22 @@ export default meta => ({ children }) => (
           <PostSection>
             <IconLink
               href="https://www.linkedin.com/in/mbeierling/"
-              iconSrc="/static/iconmonstr-linkedin-3.svg"
+              iconSrc={require("../images/icons/iconmonstr-linkedin-3.svg")}
               text="Linkedin"
             />
             <IconLink
               href="https://twitter.com/em_bi_em"
-              iconSrc="/static/Twitter_Logo_Blue.svg"
+              iconSrc={require("../images/icons/Twitter_Logo_Blue.svg")}
               text="Twitter"
             />
             <IconLink
               href="https://dev.to/embiem"
-              iconSrc="/static/dev-badge.svg"
+              iconSrc={require("../images/icons/dev-badge.svg")}
               text="DEV.to"
             />
             <IconLink
               href="https://keybase.io/mbeierling"
-              iconSrc="/static/keybase-icon.svg"
+              iconSrc={require("../images/icons/keybase-icon.svg")}
               text="Keybase"
             />
           </PostSection>

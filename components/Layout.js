@@ -52,7 +52,7 @@ export default withMediaQuery(({ children, isMobile }) => (
       <meta key="og:url" property="og:url" content="https://embiem.me" />
       <meta
         property="og:image"
-        content="https://embiem.me/static/martin-wedding.jpg"
+        content={require("../images/martin-wedding.jpg")}
       />
       <meta
         key="og:description"

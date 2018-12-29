@@ -14,13 +14,13 @@ const items = [
     <IconLink
       style={linkStyle}
       href="https://github.com/embiem"
-      iconSrc="static/icons8-github.svg"
+      iconSrc={require("../../images/icons/icons8-github.svg")}
       text="GitHub"
     />
     <IconLink
       style={linkStyle}
       href="https://gitlab.com/embiem"
-      iconSrc="static/Gitlab_font_awesome.svg"
+      iconSrc={require("../../images/icons/Gitlab_font_awesome.svg")}
       text="GitLab"
     />
   </div>,
@@ -30,25 +30,25 @@ const items = [
     <IconLink
       style={linkStyle}
       href="https://www.linkedin.com/in/mbeierling/"
-      iconSrc="static/iconmonstr-linkedin-3.svg"
+      iconSrc={require("../../images/icons/iconmonstr-linkedin-3.svg")}
       text="Linkedin"
     />
     <IconLink
       style={linkStyle}
       href="https://twitter.com/em_bi_em"
-      iconSrc="static/Twitter_Logo_Blue.svg"
+      iconSrc={require("../../images/icons/Twitter_Logo_Blue.svg")}
       text="Twitter"
     />
     <IconLink
       style={linkStyle}
       href="https://dev.to/embiem"
-      iconSrc="/static/dev-badge.svg"
+      iconSrc={require("../../images/icons/dev-badge.svg")}
       text="DEV.to"
     />
     <IconLink
       style={linkStyle}
       href="https://keybase.io/mbeierling"
-      iconSrc="static/keybase-icon.svg"
+      iconSrc={require("../../images/icons/keybase-icon.svg")}
       text="Keybase"
     />
   </div>,
@@ -60,7 +60,7 @@ const items = [
     <NameExplain />
 
     <div className="profile-image">
-      <img src="static/martin-wedding.jpg" alt="Me at my wedding" />
+      <img src={require("../../images/martin-wedding.jpg")} alt="Me at my wedding" />
     </div>
     <style jsx>{`
       .profile-image img {

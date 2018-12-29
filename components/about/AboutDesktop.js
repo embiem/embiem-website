@@ -67,13 +67,13 @@ export default ({ repos }) => (
         <IconLink
           href="https://github.com/embiem"
           className={buttonClassName}
-          iconSrc="static/icons8-github.svg"
+          iconSrc={require("../../images/icons/icons8-github.svg")}
           text="GitHub"
         />
         <IconLink
           href="https://gitlab.com/embiem"
           className={buttonClassName}
-          iconSrc="static/Gitlab_font_awesome.svg"
+          iconSrc={require("../../images/icons/Gitlab_font_awesome.svg")}
           text="GitLab"
         />
       </div>
@@ -90,33 +90,36 @@ export default ({ repos }) => (
         <IconLink
           href="https://www.linkedin.com/in/mbeierling/"
           className={buttonClassName}
-          iconSrc="static/iconmonstr-linkedin-3.svg"
+          iconSrc={require("../../images/icons/iconmonstr-linkedin-3.svg")}
           text="Linkedin"
         />
         <IconLink
           href="https://twitter.com/em_bi_em"
           className={buttonClassName}
-          iconSrc="static/Twitter_Logo_Blue.svg"
+          iconSrc={require("../../images/icons/Twitter_Logo_Blue.svg")}
           text="Twitter"
         />
         <IconLink
           href="https://dev.to/embiem"
           className={buttonClassName}
-          iconSrc="/static/dev-badge.svg"
+          iconSrc={require("../../images/icons/dev-badge.svg")}
           text="DEV.to"
         />
         <IconLink
           href="https://keybase.io/mbeierling"
           className={buttonClassName}
-          iconSrc="static/keybase-icon.svg"
+          iconSrc={require("../../images/icons/keybase-icon.svg")}
           text="Keybase"
         />
       </div>
       <hr />
       <h2>{socialHeader}</h2>
       <div className="profile-image">
-        <img src="static/martin-wedding.jpg" alt="Me at my wedding" />
-        <span>That's me at my wedding.</span>
+        <img
+          src={require("../../images/martin-wedding.jpg")}
+          alt="Me at my wedding"
+        />
+        <span>👋 That's me at my wedding</span>
       </div>
 
       <style jsx>{`

@@ -4,6 +4,7 @@ const path = require("path");
 const withCSS = require("@zeit/next-css");
 const withMDX = require("@zeit/next-mdx")();
 const withOffline = require("next-offline");
+const withOptimizedImages = require("next-optimized-images");
 const getPathsObject = require("./scripts/getPathsObject");
 
 const nextConfig = {
@@ -22,4 +23,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withOffline(withCSS(withMDX(nextConfig)));
+module.exports = withOffline(withOptimizedImages(withCSS(withMDX(nextConfig))));

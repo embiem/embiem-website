@@ -23,14 +23,19 @@
     "axios": "^0.18.0",
     "date-fns": "^2.0.0-alpha.20",
     "gitalk": "^1.4.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "imagemin-svgo": "^7.0.0",
     "next": "^7.0.2",
     "next-offline": "^3.3.1",
+    "next-optimized-images": "^2.3.1",
     "nprogress": "^0.2.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-spring": "^7.2.5"
+    "react-spring": "^7.2.5",
+    "webp-loader": "^0.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
