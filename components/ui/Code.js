@@ -5,6 +5,37 @@ import Head from "next/head";
 import { MediaQueryConsumer } from "../../utils/withMediaQuery";
 import Prism from "prismjs";
 
+export class InlineCode extends Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
+
+  static defaultProps = {
+    className: "language-*"
+  };
+
+  componentDidMount() {
+    // Highlight code components on the client
+    Prism.highlightAll();
+  }
+
+  render() {
+    return (
+      <code className={this.props.className}>
+        {this.props.children}
+        <Head>
+          <link href="/static/prism.css" rel="stylesheet" />
+        </Head>
+        <style jsx>{`
+          code {
+            padding: 2px 8px !important;
+          }
+        `}</style>
+      </code>
+    );
+  }
+}
+
 export default class CodeBlock extends Component {
   static propTypes = {
     children: PropTypes.node
