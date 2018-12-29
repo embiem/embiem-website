@@ -12,7 +12,7 @@ export default ({ children }) => (
               ${!isMobile && !isTablet ? "-2.4deg" : "0deg"}
             );
             font-size: ${isMobile ? "16px" : "18px"};
-            line-height: 34px;
+            line-height: 2rem;
             letter-spacing: 0.7px;
           }
         `}</style>
