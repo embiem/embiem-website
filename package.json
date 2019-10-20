@@ -14,7 +14,8 @@
     "postexport": "node scripts/postExport.js",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test": "npm run build && run-p --race start cypress:run"
+    "test": "npm run build && run-p --race start cypress:run",
+    "shorten": "netlify-shortener"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
@@ -43,6 +44,7 @@
     "eslint": "^5.9.0",
     "eslint-plugin-react": "^7.11.1",
     "fs-extra": "^7.0.1",
+    "netlify-shortener": "^1.0.4",
     "npm-run-all": "^4.1.5"
   }
 }
