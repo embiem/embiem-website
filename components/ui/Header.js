@@ -65,3 +65,21 @@ export const h2 = ({ children }) => (
     )}
   </MediaQueryConsumer>
 );
+
+export const h3 = ({ children }) => (
+  <MediaQueryConsumer>
+    {({ isMobile, isTablet }) => (
+      <h3>
+        {children}
+        <style jsx>{`
+          h3 {
+            padding: 24px 24px 0 24px;
+            transform: rotate(
+              ${!isMobile && !isTablet ? "-3.4deg" : "-1.4deg"}
+            );
+          }
+        `}</style>
+      </h3>
+    )}
+  </MediaQueryConsumer>
+);

@@ -50,7 +50,7 @@ export default ({ repos }) => (
             padding: 18px;
             margin-top: 18px;
             margin-right: 15px;
-            font-size: 14px;
+            font-size: 16px;
             letter-spacing: 0.4px;
             line-height: 1.5em;
             transform: rotate(-1.52deg);
@@ -125,7 +125,7 @@ export default ({ repos }) => (
       <style jsx>{`
         .profile {
           width: 577px;
-          height: 524px;
+          height: 534px;
           transform: rotate(-1.52deg);
           background-color: ${colors.primary};
           color: ${colors.background};
@@ -133,7 +133,7 @@ export default ({ repos }) => (
         }
 
         h2 {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 400;
         }
 

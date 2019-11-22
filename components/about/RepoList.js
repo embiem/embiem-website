@@ -30,7 +30,7 @@ export default ({ repos, ...props }) => (
 
       a div {
         display: inline-block;
-        margin-bottom: 14px;
+        margin-bottom: 18px;
       }
 
       span {
@@ -52,7 +52,7 @@ export default ({ repos, ...props }) => (
 
       .repo:nth-child(odd) span {
         font-weight: lighter;
-        font-size: 12px;
+        font-size: 14px;
         transform: rotate(-0.2deg);
       }
 
@@ -65,7 +65,7 @@ export default ({ repos, ...props }) => (
       .repo:nth-child(even) span {
         top: 4px;
         font-weight: lighter;
-        font-size: 12px;
+        font-size: 14px;
         transform: rotate(1.8deg);
       }
     `}</style>

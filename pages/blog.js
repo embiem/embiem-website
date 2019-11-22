@@ -4,10 +4,10 @@ import Layout from "../components/Layout";
 import PostPreview from "../components/blog/PostPreview";
 import { MediaQueryConsumer } from "../utils/withMediaQuery";
 
+import { meta as metaMLToFilterMessages } from "./blog/use-machine-learning-to-filter-messages-in-the-browser.mdx";
 import { meta as metaAutoGenerateSitemapInNextJs } from "./blog/auto-generate-sitemap-in-next-js.mdx";
-import { meta as metaWebsiteAndBlogWithNextJs } from "./blog/website-and-blog-with-next-js.mdx";
 
-const posts = [metaAutoGenerateSitemapInNextJs, metaWebsiteAndBlogWithNextJs];
+const posts = [metaMLToFilterMessages, metaAutoGenerateSitemapInNextJs];
 
 posts.sort(function(a, b) {
   // Turn your strings into dates, and then subtract them

@@ -53,14 +53,12 @@ const items = [
     />
   </div>,
 
-  <hr />,
-
   <>
-    <p>Why "embiem"?</p>
-    <NameExplain />
-
     <div className="profile-image">
-      <img src={require("../../images/martin-wedding.jpg")} alt="Me at my wedding" />
+      <img
+        src={require("../../images/martin-wedding.jpg")}
+        alt="Me at my wedding"
+      />
     </div>
     <style jsx>{`
       .profile-image img {
@@ -70,7 +68,9 @@ const items = [
         transform: rotate(3.5deg);
       }
       .profile-image {
-        margin-top: 18px;
+        margin-top: 24px;
+        display: flex;
+        justify-content: flex-end;
       }
       .profile-image:hover span {
         opacity: 1;
@@ -95,6 +95,7 @@ export default () => (
             background-color: ${colors.background};
             color: ${colors.primary};
             box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px inset;
+            border-radius: 5px 5px 0 0;
           }
         `}
       </style>
@@ -111,11 +112,11 @@ export default () => (
       <style jsx>{`
         .profile {
           width: 90%;
-          height: 622px;
           padding: 12px;
           background-color: ${colors.primary};
           color: ${colors.background};
           box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px inset;
+          border-radius: 0 0 5px 5px;
         }
 
         hr {
