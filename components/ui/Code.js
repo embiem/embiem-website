@@ -60,10 +60,9 @@ export default class CodeBlock extends Component {
                 !isMobile && !isTablet ? (
                   <style jsx>{`
                     pre {
-                      max-width: 77%;
+                      width: 692px;
                       display: inline-block;
-                      margin: 1em 64px !important;
-                      transform: rotate(-2.4deg);
+                      margin: 1em 0 !important;
                     }
                   `}</style>
                 ) : (

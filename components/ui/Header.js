@@ -16,7 +16,7 @@ export const h1 = ({ children }) => (
           }
 
           .spacer {
-            height: 12px;
+            height: 16px;
           }
 
           hr {
@@ -42,12 +42,17 @@ export const h2 = ({ children }) => (
       <h2>
         {children}
         <hr />
+        <div className="spacer" />
         <style jsx>{`
           h2 {
             padding: 24px 24px 0 24px;
             transform: rotate(
               ${!isMobile && !isTablet ? "-3.4deg" : "-1.4deg"}
             );
+          }
+
+          .spacer {
+            height: 8px;
           }
 
           hr {

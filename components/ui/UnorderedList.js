@@ -11,7 +11,7 @@ export default ({ children }) => (
             letter-spacing: 0.7px;
             line-height: 1.5rem;
             padding: 0 ${isMobile ? "40px" : "64px"};
-            transform: rotate(${!isMobile && !isTablet ? "-2.4deg" : "-0.4deg"});
+            transform: rotate(-0.4deg);
             list-style-type: circle;
           }
 

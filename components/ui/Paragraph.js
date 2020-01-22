@@ -7,10 +7,7 @@ export default ({ children }) => (
         {children}
         <style jsx>{`
           p {
-            padding: 0 ${isMobile || isTablet ? "32px" : "64px"};
-            transform: rotate(
-              ${!isMobile && !isTablet ? "-2.4deg" : "0deg"}
-            );
+            padding: 0 32px;
             font-size: ${isMobile || isTablet ? "16px" : "18px"};
             line-height: 2rem;
             letter-spacing: 0.7px;
