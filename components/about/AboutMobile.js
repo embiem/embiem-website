@@ -56,8 +56,8 @@ const items = [
   <>
     <div className="profile-image">
       <img
-        src={require("../../images/martin-wedding.jpg")}
-        alt="Me at my wedding"
+        src={require("../../images/martin_prof_picture_2020_flipped.jpg")}
+        alt="My Profile Image"
       />
     </div>
     <style jsx>{`

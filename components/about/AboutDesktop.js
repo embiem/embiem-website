@@ -116,10 +116,10 @@ export default ({ repos }) => (
       <h2>{socialHeader}</h2>
       <div className="profile-image">
         <img
-          src={require("../../images/martin-wedding.jpg")}
+          src={require("../../images/martin_prof_picture_2020_flipped.jpg")}
           alt="Me at my wedding"
         />
-        <span>👋 That's me at my wedding</span>
+        <span>👋 Hey!</span>
       </div>
 
       <style jsx>{`
@@ -170,7 +170,7 @@ export default ({ repos }) => (
         .profile-image {
           position: relative;
           left: 450px;
-          top: -10px;
+          top: 18px;
           display: inline-block;
         }
 
