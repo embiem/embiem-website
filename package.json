@@ -20,7 +20,7 @@
     "@mdx-js/mdx": "^0.16.6",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-mdx": "^1.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "date-fns": "^2.0.0-alpha.20",
     "gitalk": "^1.4.0",
     "imagemin-mozjpeg": "^8.0.0",
